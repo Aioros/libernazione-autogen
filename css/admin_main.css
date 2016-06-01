@@ -1,0 +1,260 @@
+#autogen_data {
+	display: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.placeholder {
+    margin: 10px 0;
+    float: left;
+}
+
+#zoom_control {
+    float: right;
+    margin-top: 14px;
+}
+
+#zoom_control label {
+    display: block;
+    float: left;
+    margin: 5px;
+}
+
+#main-container {
+    position: relative;
+    border: 1px solid #ddd;
+    resize: vertical;
+    min-height: 600px;
+    overflow: hidden;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+#main-container.panning {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+#graph-container {
+    overflow: visible;
+    position: relative;
+}
+
+#main-container.ui-state-active {
+    border: 3px dotted #aaa;
+}
+
+#main-container.ui-state-hover {
+    background: rgba(0, 100, 255, 0.2);
+}
+
+.item {
+    min-width: 100px;
+    max-width: 200px;
+    min-height: 18px;
+    border: 1px solid #ddd;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 8px;
+    background: white;
+}
+
+.ag-choice-palette .delete {
+    display: inline;
+    padding: 0;
+    cursor: pointer;
+}
+
+.item .delete:before,
+.ag-choice-palette .delete:before {
+    content: "\f153";
+    font: normal 16px/20px dashicons;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    opacity: 0;
+}
+
+.item:hover .delete:before, 
+.ag-choice-palette:hover .delete:before {
+    opacity: 1;
+}
+
+.item .delete:hover:before,
+.ag-choice-palette .delete:hover:before {
+    color: #c00;
+}
+
+.item img {
+    max-width: 100%;
+}
+
+.item .img-sizer {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 130px;
+    padding: 5px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    opacity: 0;
+}
+
+.item .img-sizer input {
+    width: 60px;
+}
+
+.item:hover .img-sizer {
+    opacity: 1;
+}
+
+.item.endpoint, .item.placeholder, .item.br {
+    text-align: center;
+}
+
+.item:not(.placeholder) {
+    position: absolute;
+}
+
+.item:not(.placeholder) {
+    cursor: pointer;
+}
+
+.item .inner {
+    cursor: move;
+}
+
+.item .inner:empty:before {
+    content: "Inserisci un testo...";
+    color: #999;
+}
+
+.item.br .inner:before {
+    content: "\f474";
+    font-family: dashicons;
+    color: #444;
+}
+
+.endpoint {
+    background: rgba(0, 124, 255, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.jsplumb-connector {
+    cursor: pointer;
+}
+
+.jsplumb-endpoint {
+    cursor: default;
+}
+
+#ag_overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999999;
+}
+
+#ag_overlay.full {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 3%;
+}
+
+#full_container {
+    background-color: white;
+}
+
+.full #full_container {
+    padding: 10px;
+}
+
+span.full-screen {
+    float: right;
+    padding: 7px 5px 4px;
+    border: 1px solid #ddd;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    line-height: 18px;
+    font-size: 20px;
+    margin: 10px 0 0 20px;
+}
+
+span.full-screen:before {
+    content: "\f211";
+    font-family: dashicons;
+}
+
+#ag_choice_palette_container {
+    display: none;
+}
+
+.ag-choice-palette {
+    width: 128px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    background-color: white;
+    position: relative;
+}
+
+.ag-choice-palette .color {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ag-choice-palette .color.none {
+    background: url( '/wp-content/plugins/autogen/img/none.png' ) no-repeat;
+    background-size: 100% 100%;
+}
+
+.ag-choice-palette .color.green {
+    background: rgba(0, 255, 0, 0.5);
+}
+
+.ag-choice-palette .color.blue {
+    background: rgba(0, 124, 255, 0.5);
+}
+
+.ag-choice-palette .color.yellow {
+    background: rgba(214, 255, 0, 0.5);
+}
+
+.ag-choice-palette .color.pink {
+    background: rgba(185, 0, 255, 0.5);
+}
+
+.ag-choice-palette .color.red {
+    background: rgba(255, 32, 0, 0.5);
+}
+
+.ag-choice-palette .color.orange {
+    background: rgba(255, 132, 0, 0.5);
+}
+
+.ag-choice-palette span {
+    display: inline-block;
+    padding: 6px;
+}
+
+span.used-label {
+    display: none;
+}
+
+#ag_end {
+    display: none;
+}
