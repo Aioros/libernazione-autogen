@@ -1,6 +1,6 @@
 <?php 
 if ( !defined('ABSPATH') ) define('ABSPATH', dirname(__FILE__));
-require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+//require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 
 $plugindir = plugin_dir_url(__FILE__);
 

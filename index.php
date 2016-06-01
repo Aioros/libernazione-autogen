@@ -22,7 +22,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-require_once('functions.inc.php');
+require_once('ag_functions.inc.php');
 
 add_action('init', 'ag_register_type');
 add_action('load-post.php', 'ag_post_meta_boxes_setup');
