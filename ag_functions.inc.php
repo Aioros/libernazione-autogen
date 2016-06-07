@@ -41,7 +41,9 @@ function walk_graph($graph) {
 		$valid_choices = array();
 		
 		foreach ($graph->connections as $connection) {
-			$color = $connection->color != "" ? $connection->color : "none";
+			$color = "none";
+			if (isset($connection->color) && $connection->color != "")
+				$color = $connection->color;
 			if ($connection->sourceId == $cur_block) {
 				$cur_choices[$color][] = $connection;
 			}
@@ -59,7 +61,7 @@ function walk_graph($graph) {
 		if (!empty($valid_choices)) {
 			$choice_index = array_rand($valid_choices);
 			$choice = $valid_choices[$choice_index];
-			if ($choice->color != "")
+			if (isset($choice->color) && $choice->color != "")
 				$past_choices[$choice->color] = $choice;
 			$cur_block = $choice->targetId;
 		} else {
