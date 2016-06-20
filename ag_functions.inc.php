@@ -78,7 +78,7 @@ function autogen_content($content) {
     if ($post->post_type != "autogen" && stripos($post->post_title, "Generatore ") !== 0)
         return $content;
 	$graph = json_decode(get_post_meta( $post->ID, 'autogen_data', true ));
-    $autogen_content = $content . '<span class="autogen" style="font-size: 25pt; line-height: 30pt;">' . walk_graph($graph) . '</span>';
+    $autogen_content = $content . '<span class="autogen" style="font-size: 18pt; line-height: 28pt;">' . walk_graph($graph) . '</span>';
     return $autogen_content;
 }
 
