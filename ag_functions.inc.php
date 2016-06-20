@@ -88,6 +88,7 @@ function ag_register_type() {
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
+		'show_in_rest' => true,
 		'query_var' => true,
 		'rewrite' => array( 'slug' => 'autogen' ),
 		'capability_type' => 'post',
